@@ -1,0 +1,29 @@
+
+
+날씨 만들기
+
+좌표 찍기
+
+function onGeoOk(position){
+    console.log(position);
+
+    const lat=position.coords.latitude;
+    const lng=position.coords.longitude;
+
+    console.log("you live it",lat,lng);
+
+}
+
+function onGeoError("you live it"){
+    alert("can't find you. No weather for you.");
+
+}
+
+navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError);
+
+
+우리는 두가지를 고려해야해 
+에러가 났을 경우 그렇지 않을 경우
+그래서 오케이와 에러를 만듦
+나머지는 함수가 알아서 해줌
+
