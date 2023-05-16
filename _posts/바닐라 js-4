@@ -6,9 +6,9 @@ categories: [blogging]
 tags: [글쓰기]
 ---
 
-날씨 만들기
+#날씨 만들기
 
-좌표 찍기
+##좌표 찍기
 
 function onGeoOk(position){
     console.log(position);
