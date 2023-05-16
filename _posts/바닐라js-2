@@ -9,11 +9,12 @@ tags: [글쓰기]
 
 
 math.random()
-0~1 미만의 랜덤한 숫자 제공 //소수점
+0~1 미만의 랜덤한 숫자
 math.random() * n
-n 미만의 숫자를 랜덤하게 제공 //소수점
+n 미만의 숫자를 랜덤
 
-random() 은 소수점 자리를 나타내므로
+
+random() 은 소수점 자리
 
 math.floor()
 소수점 버림
@@ -22,26 +23,28 @@ math.ceil()
 math.round()
 소수점 반올림
 
-중 우리는 0 ~ n 까지의 확률을 균등하게 배분해야 하므로
-floor 을 쓰는게 최적이다. (그리고 우리는 10 은 필요가 없다.)
-왜냐하면, ceil 은 소수점이 올림 되어 0 이 표현되지 않음(0번째 명언)
-round 는 0과 10의 확률이 절반으로 줄어듦
-( 0.5 미만의 숫자만이 0 이 되고, 9.5 이상의 숫자까지만이 10 이 되므로
-다른 숫자들은 n.5 ~ (n+1).4 까지의 범위를 가짐)
+0 ~ n 까지의 확률을 균등하게 배분해야 하므로
+floor 을 쓰는게 최적이다. (그리고 우리는 10 은 필요가 없다.
+왜냐하면, ceil 은 소수점이 올림 되어 0 이 표현되지 않음(0번째)
 
 이제 math.floor(math.random() * 10) 을
-해당 array의 length 로 바꾸어 줘야함.
-array 가 추가되거나, 줄어들면 에러가 발생 하므로,
+array의 length 로 바꾸어 줘야함. 맨날 10 들어갈 자리의 수를 바꿔주긴 힘들자나
 math.floor(math.random() * quotes.length)
 
+
+
+이미지 넣기
 
 const images = ["0.jpg", "1.jpg", "2.jpg"];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
+여기도 랜덤이겠구나 생각할 수 있지
 
 const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImage}`;
+
+`` 이걸 강조하시더라고 다른거와 헷갈리지 말라고
 
 document.body.appendChild(bgImage);
 console.log(bgImage);
@@ -52,7 +55,10 @@ document.createElement("img");
 document.body.appendChild(bgImage);
 - html body 안에 bgImage 추가
 
-JS에서 html 요소를 생성
+
+
+JS에서 html 요소를 생성하기
+
 createElement(" ")
 예를 들어,
 document.createElement("img")일 경우 html 내에 img 태그를 생성
