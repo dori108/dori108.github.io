@@ -27,3 +27,51 @@ navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError);
 그래서 오케이와 에러를 만듦
 나머지는 함수가 알아서 해줌
 
+
+const weatherData = document.querySelectorAll("#weather span");
+const API_KEY = "XXXXXXXXXXXXXX";
+생략 
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+주소 가져오기 lat lon key 모두 정확히 필요하다. &units=metric 얘는 화씨 섭씨 변화 주는 애 
+이런걸 하나 추가한다고 해서 값이 변화되어 나타나는것이 신기하네 진짜 자바 편하긴 하다
+
+fetch(url)
+얘를 쓰면 주소까지 굳이 가서 클릭해서 얻을 필요가 없어진다.
+
+.then((response) => response.json())
+.then((data) => {
+weatherData[0].innerText = data.name;
+weatherData[1].innerText = `${data.weather[0].main}`;
+weatherData[2].innerText = `${data.main.temp}`;
+});
+then말그대로 그런다음에... 화살표를 이용할 수도있다니
+
+
+function onGeoError() {
+alert("Can't Find Your Location. Sorry.");
+}
+
+navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
+
+
+
+끝..!
+내가 아픈건 todo 때문인게 분명해
+날씨하니까 좀 괜찮아 진 것 같네
+
+
+옛날에 배웠던 내용들이 나와서 복기하는 겸 잘 배운 것 같아요
+챌린지 하면서 한 번 더 복습할 수 있어서 좋은 것 같아요
+배울 수록 더 잘하고 싶어지긴 합니다!
+
+
+
+
+
+
+
+
+
+
+
+
