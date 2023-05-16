@@ -64,9 +64,9 @@ createElement(" ")
 document.createElement("img")일 경우 html 내에 img 태그를 생성
 
 appendChild()
-// 함수 안의 경로에 정의한 값을 가장 뒤에서 기입함
+맨 뒤에 붙여 넣어주어야 한다.
 prependChild()
-// 반대로 앞에서 기입
+맨 앞에 붙여 넣어주어야 한다.
 
 
 
